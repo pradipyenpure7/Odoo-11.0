@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- opf report tree view -->
+    <record id="opf_report_view_tree" model="ir.ui.view">
+        <field name="name">opf_report.view.tree</field>
+        <field name="model">opf.report</field>
+        <field name="arch" type="xml">
+            <tree default_order='confirmation_date desc'>
+                <field name='confirmation_date'/>
+                <field name="usr_id" />
+                <field name="customer_name" />
+                <field name='part_no'/>
+                <field name="opf_name" />
+                <field name="opf_status"/>
+                <field name="opf_qty"/>
+                <field name="po_no"/>
+                <field name="po_status"/>
+                <field name="purchase_qty"/>
+                <field name="received_qty"/>
+                <field name="qty_delivered"/>
+                <field name="inv_name"/>
+                <field name="inv_state"/>
+            </tree>
+        </field>
+    </record>
+    <!-- opf.report search view -->
+    <record id="opf_report_view_search" model="ir.ui.view">
+        <field name="name">opf.report.view.search</field>
+        <field name="model">opf.report</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <!-- Add your fields here -->
+                <field name='confirmation_date'/>
+                <field name="usr_id" string="Sales Person"/>
+                <field name="customer_name" string="Customer"/>
+                <field name='part_no' string='Description'/>
+                <field name="opf_name" string="OPF No."/>
+                <field name="opf_status" string="OPF Status"/>
+                <field name="opf_qty" string="OPF Quantity"/>
+                <field name="po_no" string="PO No."/>
+                <field name="po_status" string="PO Status"/>
+                <field name="purchase_qty" string="Purchase Quantity"/>
+                <field name="received_qty" string="Received Quantity"/>
+                <field name="qty_delivered" string="Delivered Quantity"/>
+                <field name="inv_name" string="Inv No."/>
+                <field name="inv_state" string="Invoice Status"/>
+            </search>
+        </field>
+    </record>
+    <record id="opf_report_action" model="ir.actions.act_window">
+		<field name="name">OPF Report</field>
+		<field name="res_model">opf.report</field>
+		<field name="view_mode">tree,pivot</field>
+        <field name="search_view_id" ref="opf_report_view_search"/>
+        <field name="view_ids" eval="[(5, 0, 0), 
+        (0, 0, {'view_mode': 'tree','view_id': ref('opf_report_view_tree')})]"/>
+	</record>
+    <menuitem id="opf_report_tree_submenu" action="opf_report_action" name="OPF Report" parent="sale.menu_sale_report" />
+</odoo>                                                                                                                                                 
+
+
+

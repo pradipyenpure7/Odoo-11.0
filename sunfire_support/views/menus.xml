@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="support_parent_menu" name="Customer Support" web_icon="sunfire_support,static/description/icon.png" sequence="42"/>
+        <menuitem id="support_ticket_menu" name="Support Tickets" parent="support_parent_menu" action="support_ticket_action" sequence="1"/>
+        <menuitem id="support_config_parent_menu" name="Configuration" parent="support_parent_menu" sequence="2" groups="sunfire_support.sunfire_support_manager"/>
+        <menuitem id="support_categories_menu" name="Categories" parent="support_config_parent_menu" action="support_category_action" sequence="1"/>
+        <menuitem id="support_tag_menu" name="Tags" parent="support_config_parent_menu" action="support_tag_action" sequence="2"/>
+        <menuitem id="support_channel_menu" name="Channels" parent="support_config_parent_menu" action="support_channel_action" sequence="3"/>
+        <menuitem id="support_severity_menu" name="Severity" parent="support_config_parent_menu" action="support_severity_action" sequence="4"/>
+    </data>
+</odoo>

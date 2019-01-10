@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="support_channel_view_tree" model="ir.ui.view">
+            <field name="name">support.channel.tab.tree.view</field>
+            <field name="model">support.channel</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="support_channel_action" model="ir.actions.act_window">
+            <field name="name">Support Ticket Channel</field>
+            <field name="res_model">support.channel</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+                <p>
+	          No Support Tickets Tags found
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

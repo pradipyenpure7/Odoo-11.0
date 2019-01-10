@@ -1,0 +1,58 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 2,
+            "cessValue": 0.0,
+            "cgstValue": 0,
+            "docDate": "26/09/2018",
+            "docNo": "09/033/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 52171.56,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 0.0,
+                    "hsnCode": 8471,
+                    "igstRate": 18.0,
+                    "itemNo": 1,
+                    "productDesc": "Dell Latitude 3380 , Processor: Intel Core i3 6006U , With 13.3 inch HD LCD, 4 GB 1*4 GB,DDR4 RAM, 500 GB 7200 rpm HDD, 4 cell 56 W battery (3 years warranty),Dell Backpack OS: Windows 10 Pro 64 Bit Warranty: 3 years NBD onsite warranty and 3 years Accidental\nDamage service",
+                    "productName": "Dell Latitude 3380",
+                    "qtyUnit": "NOS",
+                    "quantity": 7.0,
+                    "sgstRate": 0.0,
+                    "taxableAmount": 52171.56
+                }
+            ],
+            "sgstValue": 0,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "J-177, MIDC, Bhosari",
+            "toAddr2": "",
+            "toGstin": "02AABCR3402K1ZV",
+            "toPincode": 411026,
+            "toPlace": "",
+            "toStateCode": 27,
+            "toTrdName": "Rich Graviss Products Private Limited ",
+            "totInvValue": 342013.56,
+            "totalValue": 289842.0,
+            "transDistance": 1950,
+            "transDocDate": "26/09/2018",
+            "transDocNo": "M991A0135107",
+            "transMode": 1,
+            "transporterId": "02AAACF0841R1ZP",
+            "transporterName": "First Flight",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

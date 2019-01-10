@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="wizard_excel_report" model="ir.ui.view">
+            <field name="name">tally.xml.report.view</field>
+            <field name="model">tally.xml.report</field>
+            <field name="arch" type="xml">                
+                <form string="Tally XML" class="o_tally_form"  method="post">
+                    <group class="oe_inline">
+                        <!-- <label string="File Name"/> -->
+                        <field name="name"  />
+                        <field name="report" filename="name" style="min-width: 200px;" />
+                    </group>
+                    <!-- <group>
+                        <footer>   
+                            <button type="submit" class="o_tally_send" string="ok"/>
+                            
+                        </footer>
+                    </group> -->
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

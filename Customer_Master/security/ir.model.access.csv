@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_factory_calendor_factory_calendor,factory_calendor.factory_calendor,model_factory_calendor_factory_calendor,,1,0,0,0

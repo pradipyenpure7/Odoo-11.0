@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="service_timesheet_master_menu" web_icon="sunfire_timesheet,static/description/icon2.jpg" groups="sunfire_timesheet.service_invisible" name="Service"/>
+        <menuitem id="service_timesheet_main_menu" parent="service_timesheet_master_menu" name="Timesheet"/>
+        <menuitem id="service_timesheet_submenu" action="timesheet_submenu_action" name="My Timesheet" parent="service_timesheet_main_menu" groups="sunfire_timesheet.group_user"/>
+        <!-- <menuitem id="service_reporting_submenu" action="sunfire_report_action" name="Timesheet Report" parent="service_timesheet_main_menu" groups="sunfire_timesheet.group_manager"/> -->
+        <menuitem id="service_sales_main_menu" parent="service_timesheet_master_menu" name="Sales"/>
+        <menuitem action="sunfire_sales.action_sale_order_approval" id="service_sale_order_approval" name="Validate OPF" parent="service_sales_main_menu" sequence="1"/>
+    </data>
+</odoo>

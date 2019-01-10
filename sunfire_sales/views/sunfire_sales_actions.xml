@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- Cancelled OPF Action -->
+<record id="action_sale_order_cancelled_opf" model="ir.actions.act_window">
+    <field name="name">Cancelled OPF</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">sale.order</field>
+    <field name="view_ids" eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('sale_order_canceled_opf_tree')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('sale.view_order_form')})]"/>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('state', '=','cancel')]</field>
+</record>
+
+<!-- Validate OPF -->
+<record id="action_sale_order_approval" model="ir.actions.act_window">
+    <field name="name">Validate OPF</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">sale.order</field>
+    <field name="view_ids" eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('sale.view_order_tree')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('sale.view_order_form')})]"/>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('order_approve_line.users','=',uid),('approve_flag','=',False),('state', 'not in', ('draft', 'sent', 'cancel','done'))]</field>
+</record>
+<!-- Approve OPF -->
+<record id="action_sale_order_validated" model="ir.actions.act_window">
+    <field name="name">Approve OPF</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">sale.order</field>
+    <field name="view_ids" eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('sale.view_order_tree')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('sale.view_order_form')})]"/>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('approve_flag','=',True),('state', 'not in', ('draft', 'sent', 'cancel','done'))]</field>
+</record>
+     <!-- ===========Action for menu quotation inherited for setting domain to state draft============ -->
+<record id="sale.action_quotations" model="ir.actions.act_window">
+    <field name="name">Quotations</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">sale.order</field>
+    <field name="view_type">form</field>
+    <field name="view_id" ref="sale.view_quotation_tree"/>
+    <field name="view_mode">tree,form,calendar,pivot,graph</field>
+    <field name="search_view_id" ref="sunfire_sales.sale_order_view_search_quotation_new"/>
+    <field name="domain">[("state","=","draft")]</field>
+    <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+                Create a Quotation, the first step of a new sale.
+        </p>
+        <p>
+                Your next actions should flow efficiently: confirm the Quotation
+                to a Sales Order, then create the Invoice and collect the Payment.
+        </p>
+    </field>
+</record>
+
+<!-- ######### OPF Action ############# -->
+<record id="sale.action_orders" model="ir.actions.act_window">
+        <field name="name">OPF</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="sunfire_sales.view_order_tree_inhe"/>
+        <field name="view_mode">tree,form,calendar,pivot,graph</field>
+        <field name="search_view_id" ref="sunfire_sales.sale_order_view_search_opf_new"/>
+        <field name="context">{}</field>
+        <field name="domain">[('state', 'not in', ('draft', 'sent', 'cancel'))]</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Quotation, the first step of a new sale.
+            </p><p>
+                Once the quotation is confirmed, it becomes a sales order.
+                You'll be able to invoice it and collect payments.
+                From the <i>Sales Orders</i> menu, you can track delivery
+                orders or services.
+            </p>
+        </field>
+</record>
+<!-- trees_views -->
+<record id="base.action_partner_form" model="ir.actions.act_window">
+    <field name="name">Customers</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">res.partner</field>
+    <!-- <field name="view_type">form</field> -->
+    <field name="view_mode">tree,kanban,form</field>
+    <field name="domain">[('type', '=', 'contact'),('parent_id','=',False),('customer','=',True),('is_company','=',True)]</field>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">
+                Click to add a contact in your address book.
+      </p>
+      <p>
+                Odoo helps you easily track all activities related to
+                a customer: discussions, history of business opportunities,
+                documents, etc.
+      </p>
+    </field>
+</record>
+<record id="base.action_partner_supplier_form" model="ir.actions.act_window">
+    <field name="name">Vendors</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_type">form</field>
+    <field name="domain">[]</field>
+    <field name="view_mode">kanban,tree,form</field>
+    <field name="domain">[('type', '=', 'contact'),('parent_id','=',False),('supplier','=',True)]</field>
+
+    <field name="filter" eval="True"/>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">
+                Click to add a contact in your address book.
+      </p>
+      <p>
+                Odoo helps you easily track all activities related to
+                a supplier: discussions, history of purchases,
+                documents, etc.
+      </p>
+    </field>
+</record>
+<record id="contacts.action_contacts" model="ir.actions.act_window">
+    <field name="name">Contacts</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">kanban,tree,form</field>
+    <field name="domain">[('parent_id','!=',False),('type', '=', 'contact')]</field>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">
+            Click to add a contact in your contacts directory.
+      </p>
+      <p>
+            Odoo helps you easily track all activities related to
+            a customer: discussions, history of business opportunities,
+            documents, etc.
+      </p>
+    </field>
+</record>
+
+</odoo>

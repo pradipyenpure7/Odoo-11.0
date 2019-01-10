@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- support.ticket form view -->
+    <record id="support_ticket_view_form" model="ir.ui.view">
+      <field name="name">support.ticket.view.form</field>
+      <field name="model">support.ticket</field>
+      <!-- <field name="attrs">{'readonly' :('assigned_user_id','=',user.id)}</field> -->
+      <field name="arch" type="xml">
+        <form string="Support Ticket">
+          <header>
+            <button type="object" name="action_assigned" string='Assigned' attrs="{'invisible' :['|', ('state', 'in',['in_progress','assigned','awaiting','resolved','closed'] )]}"/>
+            <button type="object" name="action_in_progress" string='Work in Progress' attrs="{'invisible' :['|', ('state', 'in',['open','in_progress','awaiting','resolved','closed'] )]}"/>
+            <button type="object" name="action_awaiting" string='Awaiting Customer' attrs="{'invisible' :['|', ('state', 'in',['open','assigned','awaiting','resolved','closed'] )]}"/>
+            <button type="object" name="action_resolved" string='Resolved' attrs="{'invisible' :['|', ('state', 'in',['open','in_progress','resolved','assigned','closed'] )]}"/>
+            <button type="object" name="action_close" string='Close Ticket' attrs="{'invisible' :['|', ('state', 'in',['open','awaiting','assigned','in_progress','closed'] )]}" groups="sunfire_support.sunfire_support_manager"/>
+            <field name="state" widget="statusbar" statusbar_visible="open,assigned,in_progress,awaiting,resolved,closed" readonly="1"/>
+          </header>
+          <sheet>
+            <div class="oe_title">
+              <label for="name" class="oe_edit_only"/>
+              <h1>
+                <field name="name"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <field name="tag_id" attrs="{'readonly':[('ticket_no','!=',False)]}"/>
+                <field name="ticket_no" readonly="1"/>
+                <field name="channel_id"/>
+                <field name="severity_id"/>
+                <field name="create_uid" invisible="1"/>
+              </group>
+              <group>
+                <field name="category_id"/>
+                <field name="reassign" attrs="{'invisible' :[('state','=','open')]}"/>
+                <field name="assigned_user_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open':True}" attrs="{'readonly':[('reassign','=',False),('state','!=','open')]}"/>
+                <field name="partner_id" domain="[('customer','=',True),('parent_id','=',False),('user_ids','=',False)]" options="{'no_quick_create':True,'no_create_edit':True,'no_open':True}"/>
+                <field name="email"/>
+                <field name="mobile"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Actions Taken" name='actions_taken'>
+                <field name="action_line" mode='tree' context="{'default_assigned_user_id':assigned_user_id}">
+                  <tree editable="bottom">
+                    <field name="assigned_user_id"/>
+                    <field name="name"/>
+                    <field name="wrk_loc"/>
+                    <field name="create_date" readonly="True"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Description" name='description'>
+                <field name="description_line" mode='tree' context="{'default_user_id':uid}">
+                  <tree editable="bottom">
+                    <field name="user_id"/>
+                    <field name="name"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Attachments">
+                <field name="attach_line" mode='tree'>
+                  <tree editable="bottom">
+                    <field name='name' string='Attachment Description'/>
+                    <field name="attachment" filename="filename" widget='binary'/>
+                    <field name="filename" invisible="1"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="Reassignment Log">
+                <field name="reassign_line" mode='tree' options="{'no_quick_create':True,'no_create_edit':True,'no_open':True}">
+                  <tree editable="bottom">
+                    <field name="user_id" string="Assigned By" options="{'no_quick_create':True,'no_create_edit':True,'no_open':True}"/>
+                    <field name="reassign_user_id" string="Assigned To" options="{'no_quick_create':True,'no_create_edit':True,'no_open':True}"/>
+                    <field name="create_date" readonly="True"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+          <div class="oe_chatter">
+            <!-- <field name="message_follower_ids" widget="mail_followers"/> -->
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
+        </form>
+      </field>
+    </record>
+    <!-- support_ticket_tree view -->
+    <record id="support_ticket_view_tree" model="ir.ui.view">
+      <field name="name">support.ticket.view.tree</field>
+      <field name="model">support.ticket</field>
+      <field name="arch" type="xml">
+        <tree default_order="create_date desc" decoration-danger="assigned_user_id==False" decoration-muted="assigned_user_id!=uid and create_uid!=uid">
+          <field name="create_uid" invisible="1"/>
+          <field name="create_date" string="Logged Date"/>
+          <field name="write_date" string="Last Modified Date"/>
+          <field name="logged_date"/>
+          <field name="name"/>
+          <field name="tag_id"/>
+          <field name="ticket_no"/>
+          <field name="channel_id"/>
+          <field name="severity_id"/>
+          <field name="category_id"/>
+          <field name="assigned_user_id"/>
+          <field name="partner_id"/>
+          <field name="email"/>
+          <field name="mobile"/>
+          <field name="time_close"/>
+        </tree>
+      </field>
+    </record>
+    <!-- support.ticket search view -->
+    <record id="support_ticket_view_search" model="ir.ui.view">
+      <field name="name">support.ticket.view.search</field>
+      <field name="model">support.ticket</field>
+      <field name="arch" type="xml">
+        <search string="Search Description">
+          <field name="name"/>
+          <field name="tag_id"/>
+          <field name="ticket_no"/>
+          <field name="channel_id"/>
+          <field name="severity_id"/>
+          <field name="category_id"/>
+          <field name="assigned_user_id"/>
+          <field name="partner_id"/>
+          <field name="email"/>
+        </search>
+      </field>
+    </record>
+    <record id="support_ticket_action" model="ir.actions.act_window">
+      <field name="name">Support Tickets</field>
+      <field name="res_model">support.ticket</field>
+      <field name="view_mode">tree,kanban,form,graph</field>
+      <field name="context">{'auto_refresh': 1}</field>
+      <field name="help" type="html">
+        <p>
+                    No Support Tickets found
+        </p>
+      </field>
+    </record>
+
+
+
+
+  </data>
+</odoo>

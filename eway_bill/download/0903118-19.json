@@ -1,0 +1,58 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 27,
+            "cessValue": 0.0,
+            "cgstValue": 14906.16,
+            "docDate": "25/09/2018",
+            "docNo": "09/031/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 8471,
+                    "igstRate": 0.0,
+                    "itemNo": 1,
+                    "productDesc": "Dell Latitude 3380 , Processor: Intel Core i3 6006U , With 13.3 inch HD LCD, 4 GB 1*4 GB,DDR4 RAM, 500 GB 7200 rpm HDD, 4 cell 56 W battery (3 years warranty),Dell Backpack OS: Windows 10 Pro 64 Bit Warranty: 3 years NBD onsite warranty and 3 years Accidental\nDamage service",
+                    "productName": "Dell Latitude 3380",
+                    "qtyUnit": "NOS",
+                    "quantity": 4.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 29812.32
+                }
+            ],
+            "sgstValue": 14906.16,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "J-177, MIDC, Bhosari",
+            "toAddr2": "",
+            "toGstin": "27AABCR3402K1ZJ",
+            "toPincode": 411026,
+            "toPlace": "",
+            "toStateCode": 27,
+            "toTrdName": "Rich Graviss Products Private Limited ",
+            "totInvValue": 195436.32,
+            "totalValue": 165624.0,
+            "transDistance": 200,
+            "transDocDate": "25/09/2018",
+            "transDocNo": "10324359",
+            "transMode": 1,
+            "transporterId": "27AFZPD0906Q1ZT",
+            "transporterName": "False",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record model="ir.ui.view" id="view_order_form_inherited_124">
+        <field name="name">sale.order.inherit123</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+    <!--######## Button Group Access Rights #############################-->
+    <xpath expr="//button[@name='action_cancel']" position="replace">
+        <!-- <button name="action_cancel" states="draft" type="object" string="Cancel Quotation" groups="sunfire_sales.sales_groups_bu_head"/>
+        <button name="action_cancel" states="sent,sale" type="object" string="Cancel OPF" groups="sunfire_sales.sales_groups_bu_head"/> -->
+        <button name="action_cancel" states="draft" type="object" string="Cancel Quotation" />
+        <button name="action_cancel" states="sent,sale" type="object" string="Cancel OPF"/>
+    </xpath>
+    <!--  =========================================label Change for Confirm order=========================================================  -->
+    <xpath expr="//button[@name='action_done']" position="replace">
+        <!-- <button name="action_done" type="object" string="Approve OPF" states="sale" groups="sunfire_sales.sales_groups_bu_head" help="If the sale is locked, you can not modify it anymore. However, you will still be able to invoice or deliver."/> -->
+        <button name="action_done" type="object" string="Approve OPF" states="sale" groups="sunfire_sales.sales_groups_bu_head,sunfire_sales.sales_groups_manager" help="If the sale is Approved, you can not modify it anymore. However, you will still be able to invoice or deliver."/>
+    </xpath>
+    <!--  =========================================Approve for Approval by approval types=========================================================  -->
+    <xpath expr="//button[@name='action_done']" position="after">
+        <button name="approve_opf" type="object" string="Validate OPF" groups="sunfire_sales.sales_groups_manager,sunfire_sales.sales_groups_bu_head,sunfire_sales.sales_groups_team_lead,sunfire_sales.sales_groups_sam,sunfire_timesheet.service_invisible" states="sale" domain="[('order_approve_line.users','=',uid)]" help="If the sale is locked, you can not modify it anymore. However, you will still be able to invoice or deliver."/>
+    </xpath>
+    <xpath expr="//button[@name='action_unlock']" position="replace">
+        <!-- <button name="action_unlock" type="object" string="Un-approve OPF" states="done" groups="sunfire_sales.sales_groups_bu_head"/> -->
+        <button name="action_unlock" type="object" string="Un-approve OPF" states="done" groups="sunfire_sales.sales_groups_bu_head,sunfire_sales.sales_groups_manager"/>
+    </xpath>
+    <!--###################3Confirm Sale Button name Change only##############-->
+    <xpath expr="//button[@name='action_confirm'][2]" position="replace">
+        <button name="action_confirm" string="Create OPF" groups="sunfire_sales.sales_groups_team_lead,sunfire_sales.sales_groups_manager,sunfire_sales.sales_groups_bu_head,sunfire_sales.sales_groups_sam" type="object" attrs="{'invisible': [('state', 'not in', ['draft'])]}"/>
+    </xpath>
+    <xpath expr="//button[@name='action_confirm'][1]" position="replace">
+        <button name="action_confirm" id="action_confirm" string="Create OPF" groups="sunfire_sales.sales_groups_team_lead,sunfire_sales.sales_groups_manager,sunfire_sales.sales_groups_bu_head,sunfire_sales.sales_groups_sam" class="btn-primary" type="object" attrs="{'invisible': [('state', 'not in', ['sent'])]}" />
+    </xpath>
+    <!-- ##################33Print Buttons Invisible#################3 -->
+    <xpath expr="//button[@name='print_quotation'][1]" position="attributes">
+        <attribute name="invisible">1</attribute>
+    </xpath>
+    <xpath expr="//button[@name='print_quotation'][2]" position="attributes">
+        <attribute name="invisible">1</attribute>
+    </xpath>
+    <!-- #####################Create Invoice" Button of Sale.order################ -->
+    <xpath expr="//button[@name='%(sale.action_view_sale_advance_payment_inv)d'][1]" position="replace">
+        <button name="%(sale.action_view_sale_advance_payment_inv)d" string="Create Invoice" type="action" context="{'default_advance_payment_method': 'percentage'}" attrs="{'invisible': ['|',('invoice_status', '!=','to invoice')]}" groups="account.group_account_manager"/>
+    </xpath>
+    <!-- ###################Smart Button 'Delivery' Visibility###############-->
+    <xpath expr="//button[@name='action_view_delivery']" position="replace">
+        <button type="object" name="action_view_delivery" class="oe_stat_button" icon="fa-truck" attrs="{'invisible': [('delivery_count', '=', 0)]}" groups="sunfire_sales.sales_groups_bu_head">
+            <field name="delivery_count" widget="statinfo" string="Delivery"/>
+        </button>
+    </xpath>
+    <!-- ###############Smart Button 'Invoices' Visibility ################-->
+    <xpath expr="//button[@name='action_view_invoice']" position="replace">
+        <button name="action_view_invoice" type="object" class="oe_stat_button" icon="fa-pencil-square-o" attrs="{'invisible': [('invoice_count', '=', 0)]}" groups="sunfire_sales.sales_groups_bu_head">
+            <field name="invoice_count" widget="statinfo" string="Invoices"/>
+        </button>
+    </xpath>
+    </field>
+    </record>
+</odoo>

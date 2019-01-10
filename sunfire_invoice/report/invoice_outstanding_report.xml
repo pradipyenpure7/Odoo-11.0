@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="invoice_outstanding_report_view_tree" model="ir.ui.view">
+            <field name="name">invoice_outstanding.report.view.tree</field>
+            <field name="model">invoice_outstanding.report</field>
+            <field name="arch" type="xml">
+                <tree default_order='date_due desc'>
+                    <field name="sam"/>
+                    <field name="cust"/>
+                    <field name="inv_date"/>
+                    <field name="inv_no"/>
+                    <field name="inv_name"/>
+                    <field name="date_due"/>
+                    <field name="due_amt"/>
+                    <field name="total"/>
+                    <field name="opfno"/>
+                    <field name="opf_date"/>
+                    <field name="po_ref"/>
+                    <field name="podate"/>
+                    <field name="paymnt_term"/>
+                    <field name="term_days"/>
+                    <field name="inv_state"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Pieline Report search view -->
+        <record id="invoice_outstanding_report_view_search" model="ir.ui.view">
+            <field name="name">invoice_outstanding.report.view.search</field>
+            <field name="model">invoice_outstanding.report</field>
+            <field name="arch" type="xml">
+                <search string="Search Description">
+                    <!-- Add your fields here -->
+                    <field name="opfno"/>
+                    <field name="po_ref"/>
+                    <field name="opf_date"/>
+                    <field name="sam"/>
+                    <field name="podate"/>
+                    <field name="inv_name"/>
+                    <field name="inv_no"/>
+                    <field name="inv_state"/>
+                    <field name="total"/>
+                    <field name="date_due"/>
+                    <field name="due_amt"/>
+                    <field name="cust"/>
+                    <field name="paymnt_term"/>
+                    <field name="term_days"/>
+                </search>
+            </field>
+        </record>
+        <record id="invoice_outstanding_report_action" model="ir.actions.act_window">
+            <field name="name">invoice Outstanding Report</field>
+            <field name="res_model">invoice_outstanding.report</field>
+            <field name="view_mode">tree,pivot,graph,kanban</field>
+            <field name="search_view_id" ref="invoice_outstanding_report_view_search"/>
+            <field name="view_ids" eval="[(5, 0, 0), 
+        (0, 0, {'view_mode': 'tree','view_id': ref('invoice_outstanding_report_view_tree')})]"/>
+        </record>
+        <menuitem id="invoice_outstanding_report_sale_submenu" action="invoice_outstanding_report_action" sequence="0" name="Outstanding Report" parent="sale.menu_sale_report"/>
+        <menuitem id="invoice_outstanding_report_invoice_submenu" action="invoice_outstanding_report_action" sequence="0" name="Outstanding Report" parent="account.account_reports_management_menu" />
+    </data>
+</odoo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

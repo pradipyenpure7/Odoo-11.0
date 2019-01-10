@@ -1,0 +1,58 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 33,
+            "cessValue": 0.0,
+            "cgstValue": 0,
+            "docDate": "26/09/2018",
+            "docNo": "09/035/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 127718.1,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 0.0,
+                    "hsnCode": 84717090,
+                    "igstRate": 18.0,
+                    "itemNo": 1,
+                    "productDesc": "VNX51/53 900GB 10K 25X2.5IN DRV DPE/DAE",
+                    "productName": "V3-2S10-900U",
+                    "qtyUnit": "NOS",
+                    "quantity": 15.0,
+                    "sgstRate": 0.0,
+                    "taxableAmount": 127718.1
+                }
+            ],
+            "sgstValue": 0,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "Plot No: 5, 6, 7 & 8 SELF HELP INDUSTRIAL ESTATE Keelkattalai,",
+            "toAddr2": "",
+            "toGstin": "33AAACF0483F1Z3",
+            "toPincode": 600117,
+            "toPlace": "",
+            "toStateCode": 33,
+            "toTrdName": "Emerson Process Management Chennai Private Limited",
+            "totInvValue": 837263.1,
+            "totalValue": 709545.0,
+            "transDistance": 950,
+            "transDocDate": "26/09/2018",
+            "transDocNo": "M991Q4402192",
+            "transMode": 3,
+            "transporterId": "27AAACF0841R1ZD",
+            "transporterName": "FIRST FLIGHT",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

@@ -1,0 +1,71 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 27,
+            "cessValue": 0.0,
+            "cgstValue": 17815.95,
+            "docDate": "20/11/2018",
+            "docNo": "11/096/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 85176290,
+                    "igstRate": 0.0,
+                    "itemNo": 1,
+                    "productDesc": "Cisco 8831 Base/Control Panel With No DECT Radio",
+                    "productName": "CP-8831-NR-K9=",
+                    "qtyUnit": "NOS",
+                    "quantity": 3.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 35631.9
+                },
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 85176290,
+                    "igstRate": 0.0,
+                    "itemNo": 2,
+                    "productDesc": "Spare Cisco 8831 Display Control Unit (DCU)\n",
+                    "productName": "CP-8831-DCU-S",
+                    "qtyUnit": "NOS",
+                    "quantity": 1.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 0.0
+                }
+            ],
+            "sgstValue": 17815.95,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "MUTTHA TOWERS ,Level 3 S.No 103/123/1,Don Bosco road Marg ,off airport road ,Yerawada ,Pune 411006 ",
+            "toAddr2": "",
+            "toGstin": "27AADCR3633G1ZH",
+            "toPincode": 411006,
+            "toPlace": "",
+            "toStateCode": 27,
+            "toTrdName": "Rotary International Infotech Private Limited",
+            "totInvValue": 233586.9,
+            "totalValue": 197955.0,
+            "transDistance": 0,
+            "transDocDate": "",
+            "transDocNo": "False",
+            "transMode": 0,
+            "transporterId": "False",
+            "transporterName": "False",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

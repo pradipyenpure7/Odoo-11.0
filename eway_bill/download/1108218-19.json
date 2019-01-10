@@ -1,0 +1,58 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 27,
+            "cessValue": 0.0,
+            "cgstValue": 3240.9,
+            "docDate": "02/11/2018",
+            "docNo": "11/082/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 998313,
+                    "igstRate": 0.0,
+                    "itemNo": 1,
+                    "productDesc": "3 Years Gold Maintenance Citrix NetScaler SD-WAN 210-20-LTE-R2-SE (20 Mbps) Standard Edition Appliance",
+                    "productName": "4059792",
+                    "qtyUnit": "NOS",
+                    "quantity": 1.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 6481.8
+                }
+            ],
+            "sgstValue": 3240.9,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "Asian Paints Ltd., C/o Logipark W/H Pvt. Ltd., gate No 2328, Ubale Nagar, Ganga Retreat Club Road, Wagholi- 412207.",
+            "toAddr2": "",
+            "toGstin": "27AAACA3622K1ZV",
+            "toPincode": 0,
+            "toPlace": "",
+            "toStateCode": 27,
+            "toTrdName": "Asian Paints Limited",
+            "totInvValue": 42491.8,
+            "totalValue": 36010.0,
+            "transDistance": 0,
+            "transDocDate": "",
+            "transDocNo": "False",
+            "transMode": 0,
+            "transporterId": "False",
+            "transporterName": "False",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

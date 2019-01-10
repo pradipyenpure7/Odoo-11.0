@@ -1,0 +1,58 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 27,
+            "cessValue": 0.0,
+            "cgstValue": 3503.0,
+            "docDate": "26/11/2018",
+            "docNo": "11/106/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 8517,
+                    "igstRate": 0.0,
+                    "itemNo": 1,
+                    "productDesc": "Citrix NetScaler SD-WAN 210-ZLTE-R2-SE Zero Capacity Standard Edition Appliance (20 Mb Branches)",
+                    "productName": "3022642-E6",
+                    "qtyUnit": "NOS",
+                    "quantity": 1.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 7006.0
+                }
+            ],
+            "sgstValue": 3503.0,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "C/o Datamatics Global Services Ltd, Suyojit Datamatics Knowledge Center, Unit No. S-1, ",
+            "toAddr2": "",
+            "toGstin": "27AADCA1701E1ZD",
+            "toPincode": 422009,
+            "toPlace": "",
+            "toStateCode": 27,
+            "toTrdName": "Bajaj Allianz Life Insurance Company Limited",
+            "totInvValue": 45928.22,
+            "totalValue": 38922.22,
+            "transDistance": 250,
+            "transDocDate": "26/11/2018",
+            "transDocNo": " P48852878",
+            "transMode": 1,
+            "transporterId": "29AAACD8017H2ZN",
+            "transporterName": "DTDC",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

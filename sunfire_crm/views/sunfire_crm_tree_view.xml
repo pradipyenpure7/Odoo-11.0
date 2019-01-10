@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- sunfire_crm tree view -->
+<record id="sunfire_crm_view_tree" model="ir.ui.view">
+    <field name="name">sunfire_crm.view.tree</field>
+    <field name="model">crm.lead</field>
+    <field name="domain">[('crm_line.id','=',False)]</field>
+    <field name="arch" type="xml">
+            <tree default_order="create_date desc">
+                <field name="create_date_new"/>
+                <field name="user_id"/>
+                <field name="partner_id"/>
+                <field name="name"/>
+                <field name="stage_id"/>
+                <field name="oem"/>
+                <field name="deal"/>
+                <field name="lob"/>
+                <field name="planned_rev_shrt"/>
+                <field name="bottom_rev_shrt"/>
+                <field name="currency_id"/>
+                <field name="probability"/>
+                <field name="write_date_new" string="Last Updated Date"/>
+                <field name="date_deadline_mnth" string="Expected closing (month)"/>
+                <field name="date_deadline_year" string="Expected closing (year)"/>
+            </tree>
+        </field>
+</record>
+</odoo>

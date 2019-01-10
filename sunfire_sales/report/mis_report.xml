@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- mis report tree view -->
+    <record id="mis_report_view_tree" model="ir.ui.view">
+        <field name="name">mis_report.view.tree</field>
+        <field name="model">mis.report</field>
+        <field name="arch" type="xml">
+            <tree default_order='inv_date desc'>
+                <field name="id_user" invisible="1"/>
+                <field name="user_name"/>
+                <field name="quat"/>
+                <field name="in_mnth"/>
+                <field name="opf_name"/>
+                <field name="cust_name"/>
+                <field name="stata"/>
+                <field name="inv_quat"/>
+                <field name="inv_no"/>
+                <field name="inv_date"/>
+                <field name="out_mnth"/>
+                <field name="pricelist"/>
+                <field name="toplineoutinv"/>
+                <field name="btm_line_out"/>
+                <field name="fin_yr"/>
+                <field name="sale_yr"/>
+                <field name="cust_type"/>
+                <field name="location"/>
+                <field name="top_line_in_ctp"/>
+                <field name="purchase_val_stp"/>
+                <field name="purchase_nego"/>
+                <field name="btm_line_margin_in"/>
+                <field name="act_btm_line_margin_in"/>
+                <field name='product_catagory'/>
+                <field name="lineob"/>
+            </tree>
+        </field>
+    </record>
+    <!-- mis.report search view -->
+    <record id="mis_report_view_search" model="ir.ui.view">
+        <field name="name">mis.report.view.search</field>
+        <field name="model">mis.report</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <field name="user_name"/>
+                <field name="quat"/>
+                <field name="in_mnth"/>
+                <field name="opf_name"/>
+                <field name="cust_name"/>
+                <field name="stata"/>
+                <field name="inv_quat"/>
+                <field name="inv_no"/>
+                <field name="inv_date"/>
+                <field name="out_mnth"/>
+                <field name="pricelist"/>
+                <field name="toplineoutinv"/>
+                <field name="btm_line_out"/>
+                <field name="fin_yr"/>
+                <field name="sale_yr"/>
+                <field name="cust_type"/>
+                <field name="location"/>
+                <field name="top_line_in_ctp"/>
+                <field name="purchase_val_stp"/>
+                <field name="purchase_nego"/>
+                <field name="btm_line_margin_in"/>
+                <field name="act_btm_line_margin_in"/>
+                <field name='product_catagory'/>
+                <field name="lineob"/>
+            </search>
+        </field>
+    </record>
+    <record id="mis_report_action" model="ir.actions.act_window">
+        <field name="name">MIS Report</field>
+        <field name="res_model">mis.report</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="search_view_id" ref="mis_report_view_search"/>
+        <field name="view_ids" eval="[(5, 0, 0), 
+        (0, 0, {'view_mode': 'tree','view_id': ref('mis_report_view_tree')})]"/>
+    </record>
+    <menuitem id="mis_report_tree_submenu" action="mis_report_action" name="MIS report" sequence='7' parent="sale.menu_sale_report" />
+</odoo>                                                                                                                                                 

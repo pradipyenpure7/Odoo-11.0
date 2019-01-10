@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- sale menu's submenu's -->
+    <menuitem id="crm.crm_menu_pipeline" name="Sales" parent="sale.sale_menu_root" sequence="1"/>
+    <menuitem id="crm.menu_crm_opportunities" action="crm.crm_lead_opportunities_tree_view" name="Lead" parent="crm.crm_menu_pipeline" sequence="5"/>
+    <menuitem id="sale_crm.sale_order_menu_quotations_crm" action="sale.action_quotations" parent="crm.crm_menu_pipeline" sequence="5"/>
+    <menuitem id="sale.menu_sale_order" name="OPF" action="sale.action_orders" parent="crm.crm_menu_pipeline" sequence="10"/>
+    <!-- <menuitem action="action_sale_order_approval" id="sale_order_approval" groups="sunfire_sales.sale_button_user" name="Validate OPF" parent="crm.crm_menu_pipeline" sequence="10"/> -->
+    <menuitem action="action_sale_order_approval" id="sale_order_approval" name="Validate OPF" parent="crm.crm_menu_pipeline" groups="sunfire_sales.sales_groups_team_lead" sequence="10"/>
+    <menuitem action="action_sale_order_validated" id="sale_order_validated" name="Approve OPF" parent="crm.crm_menu_pipeline" sequence="11"/>
+    <!-- Report submenu -->
+    <menuitem id="sale.menu_sale_report" name="Reports" parent="sale.sale_menu_root" sequence="5" groups="sales_team.group_sale_manager"/>
+    <!-- Lead menu for changing name -->
+    <record model="ir.ui.menu" id="crm.menu_crm_opportunities">
+        <field name="name">Lead</field>
+    </record>
+    <!-- Customer main menu -->
+    <menuitem id="sale.res_partner_menu" web_icon="sunfire_sales,static/description/cust_icon.png" action="base.action_partner_form" sequence="3" />
+    <!--OPF Cancel Tree -->
+    <menuitem action="action_sale_order_cancelled_opf" id="sale_order_cancelled_opf" name="Cancelled OPF" parent="crm.crm_menu_pipeline" sequence="18"/>
+    <!-- Master Menus -->
+    <menuitem id="master_menu" name="Master" web_icon="sunfire_sales,static/description/mast_icon.png" groups="sunfire_sales.sales_groups_manager"/>
+    <menuitem id="delivery_terms_main_submenu" action="delivery_term_info_action" name="Delivery Term" parent="master_menu" />
+    <menuitem id="delivery_period_main_submenu" action="delivery_period_info_action" name="Delivery Period" parent="master_menu" />
+    <menuitem id="warranty_main_submenu" action="warranty_info_action" name="Warranty" parent="master_menu" />
+    <menuitem id="lead_source_submenu" action="lead_source_information_action" name="Lead Source" parent="master_menu" />
+    <menuitem id="transport_mode_submenu" action="transport_mode_information_action" name="Transport Mode" parent="master_menu" />
+    <menuitem id="line_of_business_submenu" action="line_of_business_info_action" name="Line of Business (LOB)" parent="master_menu"/>
+    <menuitem id="installation_terms_submenu" action="installation_terms_action" name="Installation Terms" parent="master_menu"/>
+    <menuitem id="opportunity_stages_submenu" action="opportunity_stages_action" name="Opportunity Stages" parent="master_menu"/>
+    <menuitem id="sales_stages_submenu" action="sales_stages_action" name="Sales stages" parent="master_menu"/>
+    <menuitem id="approval_types_submenu" action="approval_types_action" name="Role Types" parent="master_menu"/>
+    <menuitem id="approval_submenu" action="approval_action" name="Approval" parent="master_menu"/>
+    <menuitem id="deal_type_submenu" action="deal_type_action" name="Deal Type" parent="master_menu"/>
+    <menuitem id="cust_type_submenu" action="cust_type_action" name="Customer Type" parent="master_menu"/>
+    <menuitem id="upload_type_submenu" action="upload_type_action" name="Upload Types" parent="master_menu"/>
+    <!-- Validate and  Menu -->
+    
+    <!-- Just menus no functionality defined as yet -->
+    <menuitem action="action_menu_outstanding_report" id="menu_outstanding_report" name="Outstanding" parent="sale.menu_sale_report" sequence="3"/>
+    <menuitem action="action_menu_weekly_report" id="menu_weekly_report" name="Weekly" parent="sale.menu_sale_report" sequence="4"/>
+    <menuitem action="action_menu_monthly_report" id="menu_monthly_report" name="Monthly" parent="sale.menu_sale_report" sequence="5"/>
+    <menuitem action="action_menu_quaterly_report" id="menu_quaterly_report" name="Quaterly Variable claim" parent="sale.menu_sale_report" sequence="6"/>
+    <menuitem id="menu_dr" name="DR" parent="sale.sale_menu_root" sequence="5"/>
+    <menuitem action="action_menu_dr_registration" id="menu_dr_registration" name="Registration" parent="menu_dr" sequence="1"/>
+    <menuitem action="action_menu_dr_status" id="menu_dr_status" name="Status" parent="menu_dr" sequence="2"/>
+    <!-- Timesheet menu in sales -->
+    <menuitem id="timesheet_sale" name="Timesheet" parent="sale.sale_menu_root" groups="sunfire_timesheet.group_user"/>
+    <menuitem id="sunfire_timesheet__sales_submenu" action="sunfire_timesheet.timesheet_submenu_action" name="My Timesheet" parent="timesheet_sale" groups="sunfire_timesheet.group_user"/>
+    <menuitem id="sunfire_reporting_sales_submenu" action="sunfire_timesheet.timesheet_report_action" name="My Timesheet Report" parent="timesheet_sale" groups="sunfire_timesheet.group_user"/>
+    <!--  Timsheet menu in invoice-->
+    <menuitem id="timesheet_account" name="Timesheet" parent="account.menu_finance" groups="sunfire_timesheet.group_user" sequence="16"/>
+    <menuitem id="sunfire_timesheet__invoice_submenu" action="sunfire_timesheet.timesheet_submenu_action" name="My Timesheet" sequence="16" parent="timesheet_account" groups="sunfire_timesheet.group_user"/>
+    <menuitem id="sunfire_reporting_invoice_submenu" action="sunfire_timesheet.timesheet_report_action" name="My Timesheet Report" parent="timesheet_account" groups="sunfire_timesheet.group_user"/>
+    <!-- Timesheet menu in purchase -->
+    <menuitem id="timesheet_purchase" name="Timesheet" parent="purchase.menu_purchase_root" groups="sunfire_timesheet.group_user" sequence="160"/>
+    <menuitem id="sunfire_timesheet_purchase_submenu" action="sunfire_timesheet.timesheet_submenu_action" name="My Timesheet" parent="timesheet_purchase" groups="sunfire_timesheet.group_user"/>
+    <menuitem id="sunfire_reporting_purchase_submenu" action="sunfire_timesheet.timesheet_report_action" name="My Timesheet Report" parent="timesheet_purchase" groups="sunfire_timesheet.group_user"/>
+
+    <menuitem action="action_sale_order_cancelled_opf" id="sale_order_cancelled_opf" name="Cancelled OPF" parent="crm.crm_menu_pipeline" sequence="18"/>
+</odoo>

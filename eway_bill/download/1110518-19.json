@@ -1,0 +1,72 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 27,
+            "cessValue": 0.0,
+            "cgstValue": 118217.88,
+            "docDate": "23/11/2018",
+            "docNo": "11/105/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 998313,
+                    "igstRate": 0.0,
+                    "itemNo": 1,
+                    "productDesc": "Jul 18 to Sep 18",
+                    "productName": "NA",
+                    "qtyUnit": "NOS",
+                    "quantity": 1.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 118217.88
+                },
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 998313,
+                    "igstRate": 0.0,
+                    "itemNo": 2,
+                    "productDesc": "Oct 18 to Dec 18",
+                    "productName": "NA",
+                    "qtyUnit": "NOS",
+                    "quantity": 1.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 118217.88
+                }
+            ],
+            "mainHsnCode": "998313",
+            "sgstValue": 118217.88,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "Ground, First and Second floor, ",
+            "toAddr2": "",
+            "toGstin": "027AACCN2366D1ZO",
+            "toPincode": 400079,
+            "toPlace": "",
+            "toStateCode": 27,
+            "toTrdName": "Netmagic IT Services Private Limited",
+            "totInvValue": 1549967.76,
+            "totalValue": 1313532.0,
+            "transDistance": 0,
+            "transDocDate": "",
+            "transDocNo": "False",
+            "transMode": 0,
+            "transporterId": "False",
+            "transporterName": "False",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

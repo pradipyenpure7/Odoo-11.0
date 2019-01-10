@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--add tally compnay name and tally running IP address in res_company model-->
+    <record id="view_company_form_inhe" model="ir.ui.view">
+        <field name="name">res.company.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='report_header']" position="after">
+                <field name="tcname"/>
+                <field name="tipaddress"/>
+            </xpath>
+        </field>
+    </record>
+    <!--add tally customer name in res_partner model-->
+    <record id="res_partner_inhe" model="ir.ui.view">
+        <field name="name">res_partner.inherit.view.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='lang']" position="after">
+                <field name="tcustname"/>
+            </xpath>
+        </field>
+    </record>
+    <!--add tally tax name in account_tax model-->
+    <record id="view_tax_form_inhe" model="ir.ui.view">
+        <field name="name">account.tax.form.inherited</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="ttaxname"/>
+                <field name="tallyledgername"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,58 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 27,
+            "cessValue": 0.0,
+            "cgstValue": 8388.2,
+            "docDate": "22/09/2018",
+            "docNo": "09/027/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 84715000,
+                    "igstRate": 0.0,
+                    "itemNo": 1,
+                    "productDesc": "UCS B200 M4 w/o CPU, mem, drive bays, HDD, mezz (UPG)",
+                    "productName": "UCSB-B200-M4-U",
+                    "qtyUnit": "NOS",
+                    "quantity": 1.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 16776.4
+                }
+            ],
+            "sgstValue": 8388.2,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "Unit 603-604, Acme Plaza Building, A.K Road, Andheri East, ",
+            "toAddr2": "",
+            "toGstin": "27AACCN4932DEZB",
+            "toPincode": 400093,
+            "toPlace": "",
+            "toStateCode": 27,
+            "toTrdName": "False",
+            "totInvValue": 109978.57,
+            "totalValue": 93202.17,
+            "transDistance": 55,
+            "transDocDate": "",
+            "transDocNo": "False",
+            "transMode": 1,
+            "transporterId": "27AALCS3803R1ZP",
+            "transporterName": "ULHAS BIDKAR",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

@@ -1,0 +1,58 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 27,
+            "cessValue": 0.0,
+            "cgstValue": 32952.96,
+            "docDate": "27/11/2018",
+            "docNo": "11/108/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 9973,
+                    "igstRate": 0.0,
+                    "itemNo": 1,
+                    "productDesc": "SNTC 24X7X4 UCS C240 M5 24 SFF + 2 rear drives w/o CPU,mem,H (60 months)",
+                    "productName": "CON-SNTP-C240M5SX",
+                    "qtyUnit": "NOS",
+                    "quantity": 4.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 65905.92
+                }
+            ],
+            "sgstValue": 32952.96,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "P-136, MNDC, Millenium Business Park, ",
+            "toAddr2": "",
+            "toGstin": "27AAJCM5178K1ZV",
+            "toPincode": 400710,
+            "toPlace": "",
+            "toStateCode": 27,
+            "toTrdName": "Majesco Software & Solutions India Pvt Ltd",
+            "totInvValue": 432049.92,
+            "totalValue": 366144.0,
+            "transDistance": 0,
+            "transDocDate": "",
+            "transDocNo": "False",
+            "transMode": 0,
+            "transporterId": "False",
+            "transporterName": "False",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

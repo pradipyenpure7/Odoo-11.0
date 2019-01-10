@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- quotation report tree view -->
+    <record id="quote_report_view_tree" model="ir.ui.view">
+        <field name="name">quotation_report.view.tree</field>
+        <field name="model">quotation.report</field>
+        <field name="arch" type="xml">
+            <tree default_order="date_order desc">
+                <field name="user_id"/>
+                <field name="part_id"/>
+                <field name="currency_id"/>
+                <field name="date_order"/>
+                <field name="name"/>
+                <field name="product_catagory"/>
+                <field name="lob"/>
+                <field name="top_price"/>
+                <field name="btm_line"/>
+            </tree>
+        </field>
+    </record>
+    <!-- quotation.report search view -->
+    <record id="quotation_report_view_search" model="ir.ui.view">
+        <field name="name">quotation.report.view.search</field>
+        <field name="model">quotation.report</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <!-- Add your fields here -->
+                <field name="user_id"/>
+                <field name="part_id"/>
+                <field name="currency_id"/>
+                <field name="date_order"/>
+                <field name="name"/>
+                <field name="product_catagory"/>
+                <field name="lob"/>
+                <field name="top_price"/>
+                <field name="btm_line"/>
+            </search>
+        </field>
+    </record>
+    <record id="quotation_report_action" model="ir.actions.act_window">
+		<field name="name">Quotation Report</field>
+		<field name="res_model">quotation.report</field>
+        <field name="search_view_id" ref="quotation_report_view_search"/>
+		<field name="view_mode">tree,pivot</field>
+        <field name="view_ids" eval="[(5, 0, 0), 
+        (0, 0, {'view_mode': 'tree','view_id': ref('quote_report_view_tree')})]"/>
+	</record>
+    <menuitem id="quotation_report_tree_submenu" action="quotation_report_action" sequence="2" name="Quotation report" parent="sale.menu_sale_report" />
+</odoo>                                                                                                                                                 
+
+
+

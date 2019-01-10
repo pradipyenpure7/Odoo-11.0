@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- sunfire_timesheet form view -->
+        <record id="sunfire_timesheet_view_form" model="ir.ui.view">
+            <field name="name">sunfire_timesheet_view_form</field>
+            <field name="model">sunfire.timesheet</field>
+            <field name="arch" type="xml">
+                <form string="Timesheet">
+                    <sheet>
+                        <group>
+                            <field name="timesheet_date"/>
+                        </group>
+                        <div class="table oe-inline table-responsive">
+                            <field name="timesheet_line" mode="tree,kanban">
+                                <tree string="Activities" editable="bottom">
+                                    <field name="role_type" options="{'no_quick_create':True,'no_create_edit':True,'no_open':True}"/>
+                                    <field name="category" options="{'no_quick_create':True,'no_create_edit':True,'no_open':True}"/>
+                                    <field name="sub_category" options="{'no_quick_create':True,'no_create_edit':True,'no_open':True}"/>
+                                    <field name="customer" domain="[('customer','=',True),('parent_id','=',False),('user_ids','=',False)]"/>
+                                    <field name="timespent" string="Time Spent (hh:mm)" widget="float_time"/>
+                                    <field name="outcome"/>
+                                    <field name="poa"/>
+                                    <field name="remark" invisible="1"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer" colspan="2">
+                                <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                    <label for="total_time_hrs" />
+                                <group>
+                                <field name="total_time_hrs" nolabel="1" class="oe_inline"/>
+                                </group>
+                                </div>
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- sunfire_timesheet tree view -->
+        <record id="sunfire_timesheet_view_tree" model="ir.ui.view">
+            <field name="name">sunfire_timesheet.view.tree</field>
+            <field name="model">sunfire.timesheet</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="timesheet_date"/>
+                    <field name="total_time_hrs"/>
+
+                </tree>
+            </field>
+        </record>
+        <!-- sunfire timesheet action -->
+        <record id="timesheet_submenu_action" model="ir.actions.act_window">
+            <field name="name">Timesheet</field>
+            <field name="res_model">sunfire.timesheet</field>
+            <field name="view_mode">tree,form,kanban,graph,pivot</field>
+            <field name="view_ids" eval="[(5, 0, 0), 
+        (0, 0, {'view_mode': 'tree','view_id': ref('sunfire_timesheet_view_tree')}), 
+        (0, 0, {'view_mode': 'form', 'view_id': ref('sunfire_timesheet_view_form')})]"/>
+        </record>
+        <!-- Menus -->
+        <menuitem id="sunfire_timesheet_master_menu" web_icon="sunfire_timesheet,static/description/icon.png" groups="sunfire_timesheet.timesheet_invisible" name="Timesheet"/>
+        <menuitem id="sunfire_timesheet_submenu" action="timesheet_submenu_action" name="My Timesheet" parent="sunfire_timesheet_master_menu" groups="sunfire_timesheet.group_user"/>
+    </data>
+</odoo>

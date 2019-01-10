@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- res_partner inherit form view -->
+<record id="res_partner_inhe_form" model="ir.ui.view">
+    <field name="name">res_partner.inherit.view.form</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='category_id']" position="after">
+            <field name="cust_type" string="Customer Type"/>
+        </xpath>
+        <xpath expr="//group[@name='purchase']/field[@name='supplier']" position="after">
+            <field name="oem" string="Is a OEM"/>
+        </xpath>
+        <xpath expr="//field[@name='category_id']" position="replace">
+            <field name="category_id" invisible="1"/>
+        </xpath>
+    </field>
+</record>
+<!-- res_partner inherit tree view -->
+<record id="res_partner_inhe_tree" model="ir.ui.view">
+    <field name="name">res_partner.inherit.view.tree</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_tree"/>
+    <field name="arch" type="xml">
+        <xpath expr="/tree" position="replace">
+            <tree string="Contacts">
+                <field name="display_name" string="Name"/>
+                <field name="city" string="City"/>
+                <field name="state_id" string="State"/>
+                <!-- <field name="function" invisible="1"/>
+                <field name="phone" invisible="1"/>
+                <field name="email" invisible="1"/>
+                <field name="user_id" invisible="1"/>
+                <field name="is_company" invisible="1"/>
+                <field name="country_id" invisible="1"/>
+                <field name="parent_id" invisible="1"/>
+                <field name="active" invisible="1"/> -->
+            </tree>
+        </xpath>
+        
+    </field>
+</record>
+</odoo>

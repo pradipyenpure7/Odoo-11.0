@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- timesheet report tree view -->
+    <record id="timesheet_report_view_tree" model="ir.ui.view">
+        <field name="name">timesheet_report.view.tree</field>
+        <field name="model">timesheet.report</field>
+        <field name="arch" type="xml">
+            <tree default_order="create_date desc">
+                <field name="categ"/>
+                <field name="create_date"/>
+                <field name="sub_category"/>
+                <field name="partner_name"/>
+                <field name="outcome"/>
+                <field name="poa"/>
+                <field name="time"/>
+                <field name="user_id"/>
+            </tree>
+        </field>
+    </record>
+    <!-- timesheet.report search view -->
+    <record id="timesheet_report_view_search" model="ir.ui.view">
+        <field name="name">timesheet.report.view.search</field>
+        <field name="model">timesheet.report</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <!-- Add your fields here -->
+                <field name="categ"/>
+                <field name="create_date"/>
+                <field name="sub_category"/>
+                <field name="partner_name"/>
+                <field name="poa"/>
+                <field name="outcome"/>
+                <field name="time"/>
+                <field name="function"/>
+                <filter name="user_id" string="Function and User" icon="terp-partner" context="{'group_by':['function','user_id']}"/>
+                    <filter string="Timesheet for last 7 days" name="timesheet_date_xyz" domain="[('create_date', '&gt;', datetime.datetime.now()-datetime.timedelta(days=7))]"/>
+                    <filter string="Timesheet for Yesterday" name="time_a_before" domain="[('create_date','&gt;=',datetime.datetime.now()-datetime.timedelta(days=1))]"/>
+                    <filter string="Timesheet for last 30 days" name="time_a_before_mnth" domain="[('create_date','&gt;',datetime.datetime.now()-datetime.timedelta(days=30))]"/>
+            </search>
+        </field>
+    </record>
+    <record id="timesheet_report_action" model="ir.actions.act_window">
+		<field name="name">Timesheet Report</field>
+		<field name="res_model">timesheet.report</field>
+        <field name="search_view_id" ref="timesheet_report_view_search"/>
+		<field name="view_mode">tree,pivot,graph</field>
+        <field name="view_ids" eval="[(5, 0, 0), 
+        (0, 0, {'view_mode': 'tree','view_id': ref('timesheet_report_view_tree')})]"/>
+        <field name="context">{"search_default_timesheet_date_xyz":1,"search_default_user_id":1}</field>
+	</record>
+    <menuitem id="timesheet_report_tree_submenu" action="timesheet_report_action" sequence="10" name="Timesheet report" parent="sunfire_timesheet_master_menu" />
+</odoo>                                                                                                                                                 
+
+
+

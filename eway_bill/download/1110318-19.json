@@ -1,0 +1,63 @@
+{
+    "billLists": [
+        {
+            "OthValue": 0.0,
+            "TotNonAdvolVal": 0.0,
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 27,
+            "cessNonAdvol": 0.0,
+            "cessValue": 0.0,
+            "cgstValue": 8735.45,
+            "docDate": "23/11/2018",
+            "docNo": "11/103/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 8471,
+                    "igstRate": 0.0,
+                    "itemNo": 1,
+                    "productDesc": "Intel Core i5-8500, 6 Core, 9MB Cache, 3.0GHz, 4.1Ghz Turbo w/ HD Graphics 630 2TB  8GB (1x8GB) 2666MHz DDR4 UDIMM ,3.5 inch 1TB 7200rpm SATA Hard Drive NVIDIA Quadro P1000, 4GB, 4 mDP ,Intel Wireless-AC 9260, Dual-band 2x2 ,802.11ac Wi-Fi with MU-MIMO Bluetooth Intel WLAN 9260 Software ,Dell Wired Mouse MS116 Black ,Dell Wired Keyboard KB216 Black Windows 10 Pro (64bit) English OS-Windows Media Not Included  Dell Applications for Windows 10, \nNo Anti-Virus software  C1 3.5 HD + 3.5 1-2 HD \nNo Installation Service Required \nNo Raid 1Yr Technical Support \nTechnical Support ,No FGA \nLimited Warranty:Yr1 (Labor) \nLimited Warranty:Yr1 (Parts) \nLimited Warranty:Yr1-3 Premium \nWarranty, Advanced Exchange Service 5Yr Onsite Service 1\nYr2-5 Onsite Service 1\n3Yr Premium Panel Warranty, \nExchange Service NBD Onsite Labor Service only support limited\nOCSR parts replacement\nDesktop-Medium Freight Charges(India-I2) 1\nMonitor Freight Charges 22/24FP (India-I2) 1\nShipping Document Label (APCC/ICC) 1\nShipping Material for MT",
+                    "productName": "Dell Desktop Precision 3630 Tower",
+                    "qtyUnit": "NOS",
+                    "quantity": 1.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 17470.9
+                }
+            ],
+            "mainHsnCode": "8471",
+            "sgstValue": 8735.45,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "SHRI KRISHNA KUNJ, 111/2, ANAND COLONY,,",
+            "toAddr2": " NEAR SUVARNEREKHA DINNING HALL, PRABHAT ROAD",
+            "toGstin": "27AACCP1941Q1Z0",
+            "toPincode": 411004,
+            "toPlace": "Pune",
+            "toStateCode": 27,
+            "toTrdName": "Paranjape Schemes (Construction) Limited",
+            "totInvValue": 114531.42,
+            "totalValue": 97060.52,
+            "transDistance": 0,
+            "transDocDate": "",
+            "transDocNo": "False",
+            "transMode": 1,
+            "transType": 1,
+            "transporterId": "12345",
+            "transporterName": "False",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "12345",
+            "vehicleType": "R"
+        }
+    ],
+    "version": "1.0.0618"
+}

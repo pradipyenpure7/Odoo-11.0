@@ -1,0 +1,58 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 27,
+            "cessValue": 0.0,
+            "cgstValue": 78611.6,
+            "docDate": "19/09/2018",
+            "docNo": "09/023/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, ",
+            "fromAddr2": "Behind Maruti Mandir, Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 9.0,
+                    "hsnCode": 85176990,
+                    "igstRate": 0.0,
+                    "itemNo": 1,
+                    "productDesc": "Cisco UC Phone 7841",
+                    "productName": "CP-7841-K9=",
+                    "qtyUnit": "NOS",
+                    "quantity": 65.0,
+                    "sgstRate": 9.0,
+                    "taxableAmount": 157223.2
+                }
+            ],
+            "sgstValue": 78611.6,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "8th Floor, Block n.o 5, Rhine Building, Embassy Tech Zone, Hinjawadi Phase II, Hinjawadi Rajiv Gandhi Infotech Park,",
+            "toAddr2": "",
+            "toGstin": "27AACCN4932DEZB",
+            "toPincode": 411057,
+            "toPlace": "",
+            "toStateCode": 27,
+            "toTrdName": "Nice Interactive Solutions India Private Limited",
+            "totInvValue": 1030685.4,
+            "totalValue": 873462.2,
+            "transDistance": 55,
+            "transDocDate": "",
+            "transDocNo": "False",
+            "transMode": 1,
+            "transporterId": "27AALCS3803R1ZP",
+            "transporterName": "UlhAs Akhade",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="support_ticket">
+        <field name="name">Support Desk</field>
+        <field name="description">User access level for this module</field>
+        <field name="sequence">3</field>
+    </record>
+    <record id="sunfire_support_user" model="res.groups">
+        <field name="name">Sunfire Support User</field>
+        <field name="category_id" ref="sunfire_support.support_ticket"/>
+    </record>
+    <record id="sunfire_support_manager" model="res.groups">
+        <field name="name">Sunfire Support Manager</field>
+        <!-- <field name="implied_ids" eval="[(4, ref('sunfire_support.support_user'))]"/> -->
+        <field name="category_id" ref="sunfire_support.support_ticket"/>
+    </record>
+</odoo>

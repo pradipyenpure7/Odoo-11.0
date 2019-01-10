@@ -1,0 +1,58 @@
+{
+    "billLists": [
+        {
+            "actualFromStateCode": 27,
+            "actualtoStateCode": 10,
+            "cessValue": 0.0,
+            "cgstValue": 0,
+            "docDate": "29/08/2018",
+            "docNo": "08/769/18-19",
+            "docType": "INV",
+            "fromAddr1": "401-403, 4th Floor, Yash Elina, Above Nagpur Nagari Sahakari Bank, Behind Maruti Mandir,",
+            "fromAddr2": "Off Karve Road",
+            "fromGstin": "27AALCS3803R1ZP",
+            "fromPincode": 411038,
+            "fromPlace": "Pune",
+            "fromStateCode": 27,
+            "fromTrdName": "Sunfire Technologies Pvt. Ltd.",
+            "igstValue": 7006.0,
+            "itemList": [
+                {
+                    "cessRate": 0,
+                    "cgstRate": 0.0,
+                    "hsnCode": 8517,
+                    "igstRate": 18.0,
+                    "itemNo": 1,
+                    "productDesc": "Citrix NetScaler SD-WAN 210-ZLTE-R2-SE Zero Capacity Standard Edition Appliance (20 Mb Branches)",
+                    "productName": "3022642-E6",
+                    "qtyUnit": "NOS",
+                    "quantity": 1.0,
+                    "sgstRate": 0.0,
+                    "taxableAmount": 7006.0
+                }
+            ],
+            "sgstValue": 0,
+            "subSupplyType": 1,
+            "supplyType": "O",
+            "toAddr1": "MRS.BAJAJ ALLIANZ LIFE INSU. COMP. LTD. C/O DR.AWADH KISHORE SINGH , PURANI BAZAR ,OPP . DAKBUNGLOW , LAKHISARAI ,PIN CODE \u2013 ",
+            "toAddr2": "",
+            "toGstin": "10AADCA1701E1ZS",
+            "toPincode": 811311,
+            "toPlace": "",
+            "toStateCode": 10,
+            "toTrdName": "Bajaj Allianz Life Insurance Co. Ltd.",
+            "totInvValue": 45928.22,
+            "totalValue": 38922.22,
+            "transDistance": 2100,
+            "transDocDate": "29/08/2018",
+            "transDocNo": "M991Q4402043",
+            "transMode": 3,
+            "transporterId": "10AAACF0841R2ZR",
+            "transporterName": "FIRST FLIGHT COURIERS LTD.",
+            "userGstin": "27AALCS3803R1ZP",
+            "vehicleNo": "",
+            "vehicleType": ""
+        }
+    ],
+    "version": "1.0.0618"
+}
